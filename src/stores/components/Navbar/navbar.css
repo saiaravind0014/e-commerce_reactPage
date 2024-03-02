@@ -1,0 +1,46 @@
+.navSection{
+    display: flex;
+    justify-content: space-between;
+    background-color: #113b0ebd;
+    color: antiquewhite;
+    align-items: center;
+    padding: 10px;
+    height: 6rem;
+    padding: 0 3rem;
+}
+.title{
+    font-size: 2rem;
+}
+.searchBox{
+    width: 40rem;
+    height: 3rem;
+    border-radius: 25px;
+    font-size: 20px;
+    padding-left: 10px;
+    border:5px solid #3681319c;
+    outline: none;
+}
+.user{
+    display: flex;
+    gap: 10px;
+}
+.user-status{
+    font-size: 20px;
+    padding: 0 20px;
+}
+.subMenu ul li{
+    list-style: none;
+    margin: 20px;
+}   
+.subMenu ul{
+    display: inline-flex;
+}
+.subMenu{
+    display: flex;
+    background-color: #3681319c;
+    color: antiquewhite;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}

@@ -1,0 +1,15 @@
+.prodSection{
+    display: flex;
+    background-color: #3d813846;
+}
+.imgBox{
+    width: 80%;
+    justify-content: center;
+    display: flex;
+}
+.prodImg{
+    width: 80%;
+}
+.prodTitle{
+    margin: 10px;
+}
