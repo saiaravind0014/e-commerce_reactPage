@@ -4,6 +4,15 @@ import {Link} from 'react-router-dom' //Link as StyledLink
 import styled from 'styled-components'
 import { useCart } from '../../Context/CartContext'
 
+const NavContainer = styled.div`
+
+`;
+const WebHead = styled(Link)`
+
+text-decoration: none;
+font-size: 2rem;
+color: antiquewhite;
+`;
 const StyledLink = styled(Link)`
 text-decoration: none;
   li {
@@ -27,9 +36,12 @@ const Navbar = () => {
   const {cartItems} = useCart()
   return (
     <>
+      <NavContainer>
       <div className="navSection">
-        
-          <div className="title">E-com Web</div>
+          <WebHead to={'/'}>
+            <div className="title">E-com Web</div>
+          </WebHead>
+          {/* <div className="title">E-com Web</div> */}
           <div className="search">
               <input className='searchBox' type='text' placeholder='Search...'></input>
           </div>
@@ -86,6 +98,7 @@ const Navbar = () => {
           </StyledLink>        
         </ul>
       </div>
+      </NavContainer>
     </>
   )
 }

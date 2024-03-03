@@ -1,6 +1,7 @@
 import React from 'react';
 import {mobileData} from '../../data/mobiles';
 import '../Css/products.css'
+import { Link } from 'react-router-dom';
 
 const mobImg = mobileData.slice(0,5)
 
@@ -8,6 +9,7 @@ const Mobiles = () => {
   return (
     <>
     <h2 className='prodTitle'>Mobiles</h2>
+        <Link to={'/mobiles'}>
         <div className='prodSection'>
         {
             mobImg.map((item)=>{
@@ -19,6 +21,7 @@ const Mobiles = () => {
             })
         }
         </div>
+        </Link>
     </>
   )
 }
