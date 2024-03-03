@@ -7,11 +7,15 @@ import Woman from '../Woman/Woman'
 import Furniture from '../Furniture/Furniture'
 import Ac from '../Ac/Ac'
 import Kitchen from '../Kitchen/Kitchen'
+import styled from 'styled-components'
 
+const ProductContainer = styled.div`
+
+`;
 
 const Products = () => {
   return (
-    <div>
+    <ProductContainer>
       <Mobiles/>
       <Computers/>
       <Watch/>
@@ -20,7 +24,7 @@ const Products = () => {
       <Furniture/>
       <Ac/>
       <Kitchen/>
-    </div>
+    </ProductContainer>
   )
 }
 

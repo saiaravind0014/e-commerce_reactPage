@@ -4,21 +4,25 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 // import Navbar from '../components/Navbar/Navbar'
 const FullContainer = styled.div`
+min-height:100svh;
 display:flex;
 `;
 
 const SelectedProd = styled.div`
+padding-top:10px;
 width:30%;
 border:1px solid #113b0ebd;
 `;
 const ProdInput = styled.div`
+font-size:20px;
 input{
-    margin:5px;
+    margin:10px;
+    
 }
 `;
 const PageSection = styled.div`
 display: grid;
-grid-template-columns: repeat(4,300px);
+grid-template-columns: repeat(4,280px);
 gap: 10px;
 `;
 const PageImg = styled.div`
@@ -27,7 +31,21 @@ const PageImg = styled.div`
 
     img {
         width: 100%;
+        border-radius:5px;
     }
+`;
+const CardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+`;
+
+const Desc = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 `;
 const MobilePage = () => {
 
@@ -65,16 +83,16 @@ const MobilePage = () => {
             <PageSection>
                 {filteredProduct.map((item)=>{
                     return(
-                        <div>
+                        <CardContainer>
                             <Link to={`/mobiles/${item.id}`}>
                             <PageImg className='pageImg'>
                                 <img src={item.image} alt="" />
                             </PageImg>
                             </Link>
-                            <div className='proModel'>
+                            <Desc className='proModel'>
                                 {item.category},{item.model}
-                            </div>
-                        </div>
+                            </Desc>
+                        </CardContainer>
                     )
                 })}
             </PageSection>

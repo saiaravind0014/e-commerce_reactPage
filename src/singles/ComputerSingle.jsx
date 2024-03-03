@@ -1,5 +1,5 @@
 import React from 'react'
-import { mobileData } from '../stores/data/mobiles'
+import { computerData } from '../stores/data/computers'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { useCart } from '../stores/Context/CartContext'
@@ -37,12 +37,11 @@ const [CompanylIn, ModelIn, PriceIn, DescIn] = Array(4).fill().map(() => styled.
   margin:10px;
 `);
 
-const MobileSingle = () => {
-
+const ComputerSingle = () => {
     const {id} = useParams()
     const {addToCart, cartItems} = useCart()
 
-    const product = mobileData.find((item)=>item.id === id)
+    const product = computerData.find((item)=>item.id === id)
   return (
       <>
       <SectionIn className='SectionIn'>
@@ -72,4 +71,4 @@ const MobileSingle = () => {
   )
 }
 
-export default MobileSingle
+export default ComputerSingle
